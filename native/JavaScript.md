@@ -21,7 +21,7 @@ console.log(typeof Symbol())//symbol
 console.log(Object.prototype.toString.call(null)) //[object Null]
 console.log(Object.prototype.toString.call([]))  // [object Array]
 ```
-##变量提升和函数提升
+## 变量提升和函数提升
 ```javascript
 //(1)变量提升
 //全局范围内的变量提升
@@ -179,7 +179,7 @@ function fn(){
 }
 fn()
 ```
-##this
+## this
 ```javascript
 /*
 每次调用函数时，浏览器都会把一个对象作为隐藏的参数传递进函数，这
@@ -271,7 +271,7 @@ var b = obj2.show.bind(outObj)
 b(6)
 ```
 ## Array和String中的方法对比
-###slice和splice方法
+### slice和splice方法
 ```javascript
 //slice(该方法为数组和String共有),
 //方法不会改变原数组，返回处理后的新数组
@@ -289,7 +289,7 @@ var arr1 = [1,2,3,4,5,6]
 arr1.splice(2,0,1) //第一个参数表示开始下标，第二个表示删除元素的数量，之后的元素表示添加的数量，输出[ 1, 2, 1, 3, 4, 5, 6 ]
 console.log(arr1)
 ```
-###String和Array的相互转换
+### String和Array的相互转换
 ```javascript
 	//String转Array
 {
@@ -317,7 +317,7 @@ console.log(arr1)
 }
 ```
 
-###substr,substring,slice的区别
+### substr,substring,slice的区别
 ```javascript
 //slice 
 {
@@ -340,7 +340,7 @@ console.log(arr1)
     console.log(str1)
 }
 ```
-##常用获取页面宽高的方法
+## 常用获取页面宽高的方法
 ```javascript
 document.body.clientWidth ==> BODY对象宽度  
 document.body.clientHeight ==> BODY对象高度  
@@ -377,37 +377,38 @@ event.offsetY 相对容器的垂直坐标
 document.documentElement.scrollTop 垂直方向滚动的值   
 event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量
 ```
-##DOM简介
-###节点分类
+## DOM简介
+### 节点分类
 ```javascript
 1. 元素节点：<html>、<body>、<p>等都是元素节点，即标签。
 2. 文本节点:向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本。
 3. 属性节点:元素属性，如<a>标签的链接属性href="http://www.baidu.com"。
 ```
-###dom常用方法
-####遍历方法
-| 遍历节点树    |   |
-| --------   |  
-| childNodes     | 返回一个数组，这个数组由给定元素的子节点构成
-| firstChild      |   返回第一个子节点
-| lastChild        |    返回最后一个子节点
-| parentNode  | 返回一个给定节点的父节点
-| nextSibling  | 返回给定节点的下一个子节点
-| previousSibling  | 返回给定节点的上一个子节点
+### dom常用方法
+#### 遍历方法
+
+| 遍历节点树 | |
+| -------- | -------- |
+| childNodes | 返回一个数组，这个数组由给定元素的子节点构成 |
+| firstChild | 返回第一个子节点 |
+| lastChild | 返回最后一个子节点 |
+| parentNode | 返回一个给定节点的父节点 |
+| nextSibling  | 返回给定节点的下一个子节点 |
+| previousSibling | 返回给定节点的上一个子节点 |
 **注意：nextSibling，previousSibling，firstChild，lastChild，childNodes返回到的都是下一个节点，包括文本节点，如果要返回元素节点需要用到返回元素节点的特定方法，如：nextElementSibling，firstElementChild等**
 ### 对节点进行操作
 | DOM操作   |   |
-| --------   |  
-| creatElement(element)     |创建一个新的元素节点
-| creatTextNode()     |   创建一个包含给定文本的新文本节点
-| appendChild()       |    	指定节点的最后一个节点列表后添加一个新的子节
-| insertBefore()  |	将一个给定节点插入到一个给定元素节点的给定子节点的前面
-| removeChild()  | 从一个给定元素中删除子节点
-| replaceChild()  | 	把一个给定父元素里的一个子节点替换为另外一个节点
+| ----| ---- |
+| creatElement(element)     |创建一个新的元素节点 |
+| creatTextNode()     |   创建一个包含给定文本的新文本节点 |
+| appendChild()       |    	指定节点的最后一个节点列表后添加一个新的子节 |
+| insertBefore()  |	将一个给定节点插入到一个给定元素节点的给定子节点的前面 |
+| removeChild()  | 从一个给定元素中删除子节点 |
+| replaceChild()  | 	把一个给定父元素里的一个子节点替换为另外一个节点 |
 
 ** 注意：replaceChild()removeChild()insertBefore()appendChild() 都是要指定父节点的，insertBefore()有两个参数，第一个为newItem,第二个为插入的地方**
 
-##dom阻止默认行为和冒泡
+## dom阻止默认行为和冒泡
 ```javascript
 //阻止冒泡
 e.stopPropagation();//w3c
@@ -425,8 +426,8 @@ event.returnValue = false;//ie
 element.addEventListener(type,handler,false);//w3c
 element.attachEvent("on" + type,handler);//ie
 ```
-##BOM简介
-###window对象常用方法
+## BOM简介
+### window对象常用方法
 ```javascript
 window.close();  //关闭窗口  
 
@@ -457,7 +458,7 @@ window.history.forward();  //同上
 window.history.length  //可以查看历史中的页面数   
 ```
 
-###location对象常用方法
+### location对象常用方法
 ```javascript
 location对象：表示载入窗口的URL，也可用window.location引用它  
 
@@ -484,7 +485,7 @@ location.replace("http:www.baidu.com");  //同assign()，但新地址不会被�
 location.reload(true | false);  //重新载入当前页面，为false时从浏览器缓存中重载，为true时从服务器端重载，默认为false  
 ```
 
-###screen常用方法
+### screen常用方法
 ```javascript
   screen对象：用于获取某些关于用户屏幕的信息，也可用window.screen引用它  
 
