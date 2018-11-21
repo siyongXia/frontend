@@ -133,6 +133,26 @@ console.log(new C())
     - 方法调用模式(函数作为某个对象的属性被调用) this指向调用方法的对象
     - 构造函数调用模式 this指向新创建出来的对象
     - 借用方法调用模式(上下文调用模式,call,apply) this指向指定的对象
+
+#### 通过new 关键字调用函数和直接调用函数的区别
+    ```
+        var Person = function () {
+            this.str = 1;
+        }
+        Person.prototype = {
+            constructor: Person,
+            sayHi: function () {
+                console.log(1)
+            }
+        }
+        var person = new Person();
+
+        1. 创建一个新的对象
+        2. 将所创建对象的__proto__属性值设成构造函数的prototype属性值
+        3. 将构造函数内部的上下文指向这个对象,执行构造函数内部的代码, 设置这个新的对象的属性
+        3. 隐式的返回 this
+    ```
+
 ## 继承
     子类可以使用从父类继承的属性和方法
 ### 继承的方式

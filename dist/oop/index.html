@@ -7,8 +7,8 @@
     <meta name="description" content="">
     
     
-    <link rel="preload" href="/frontend/dist/assets/css/styles.a639c6bf.css" as="style"><link rel="preload" href="/frontend/dist/assets/js/app.a639c6bf.js" as="script"><link rel="preload" href="/frontend/dist/assets/js/4.73683026.js" as="script"><link rel="prefetch" href="/frontend/dist/assets/css/1.styles.29fe1585.css"><link rel="prefetch" href="/frontend/dist/assets/css/3.styles.1e5b2a95.css"><link rel="prefetch" href="/frontend/dist/assets/js/1.29fe1585.js"><link rel="prefetch" href="/frontend/dist/assets/js/2.ddc7ef4c.js"><link rel="prefetch" href="/frontend/dist/assets/js/3.1e5b2a95.js"><link rel="prefetch" href="/frontend/dist/assets/js/5.482bd078.js"><link rel="prefetch" href="/frontend/dist/assets/js/6.001989f3.js"><link rel="prefetch" href="/frontend/dist/assets/js/7.ba1de159.js">
-    <link rel="stylesheet" href="/frontend/dist/assets/css/1.styles.29fe1585.css"><link rel="stylesheet" href="/frontend/dist/assets/css/3.styles.1e5b2a95.css"><link rel="stylesheet" href="/frontend/dist/assets/css/styles.a639c6bf.css">
+    <link rel="preload" href="/frontend/dist/assets/css/styles.135ee2d9.css" as="style"><link rel="preload" href="/frontend/dist/assets/js/app.135ee2d9.js" as="script"><link rel="preload" href="/frontend/dist/assets/js/4.4f09cc47.js" as="script"><link rel="prefetch" href="/frontend/dist/assets/css/1.styles.29fe1585.css"><link rel="prefetch" href="/frontend/dist/assets/css/3.styles.1e5b2a95.css"><link rel="prefetch" href="/frontend/dist/assets/js/1.29fe1585.js"><link rel="prefetch" href="/frontend/dist/assets/js/2.ddc7ef4c.js"><link rel="prefetch" href="/frontend/dist/assets/js/3.1e5b2a95.js"><link rel="prefetch" href="/frontend/dist/assets/js/5.482bd078.js"><link rel="prefetch" href="/frontend/dist/assets/js/6.001989f3.js"><link rel="prefetch" href="/frontend/dist/assets/js/7.ba1de159.js">
+    <link rel="stylesheet" href="/frontend/dist/assets/css/1.styles.29fe1585.css"><link rel="stylesheet" href="/frontend/dist/assets/css/3.styles.1e5b2a95.css"><link rel="stylesheet" href="/frontend/dist/assets/css/styles.135ee2d9.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/frontend/dist/" class="home-link router-link-active"><!----> <span class="site-name">健康160前端分享</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/frontend/dist/" class="nav-link">Home</a></div><div class="nav-item"><a href="/frontend/dist/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
@@ -135,6 +135,23 @@ console.log(new C())
 - 方法调用模式(函数作为某个对象的属性被调用) this指向调用方法的对象
 - 构造函数调用模式 this指向新创建出来的对象
 - 借用方法调用模式(上下文调用模式,call,apply) this指向指定的对象
+</code></pre> <h4 id="通过new-关键字调用函数和直接调用函数的区别"><a href="#通过new-关键字调用函数和直接调用函数的区别" aria-hidden="true" class="header-anchor">#</a> 通过new 关键字调用函数和直接调用函数的区别</h4> <pre><code>```
+    var Person = function () {
+        this.str = 1;
+    }
+    Person.prototype = {
+        constructor: Person,
+        sayHi: function () {
+            console.log(1)
+        }
+    }
+    var person = new Person();
+
+    1. 创建一个新的对象
+    2. 将所创建对象的__proto__属性值设成构造函数的prototype属性值
+    3. 将构造函数内部的上下文指向这个对象,执行构造函数内部的代码, 设置这个新的对象的属性
+    3. 隐式的返回 this
+```
 </code></pre> <h2 id="继承"><a href="#继承" aria-hidden="true" class="header-anchor">#</a> 继承</h2> <pre><code>子类可以使用从父类继承的属性和方法
 </code></pre> <h3 id="继承的方式"><a href="#继承的方式" aria-hidden="true" class="header-anchor">#</a> 继承的方式</h3> <h4 id="经典继承-object-create"><a href="#经典继承-object-create" aria-hidden="true" class="header-anchor">#</a> 经典继承 - Object.create</h4> <div class="language- extra-class"><pre class="language-text"><code>var o1 = { 
     sayHi: function() {
@@ -191,6 +208,6 @@ console.log(obj.sex)
         <a href="/frontend/dist/native/JavaScript.html" class="prev">
           原生JavaScript简介
         </a></span> <!----></p></div> </div> <!----></div></div>
-    <script src="/frontend/dist/assets/js/4.73683026.js" defer></script><script src="/frontend/dist/assets/js/app.a639c6bf.js" defer></script>
+    <script src="/frontend/dist/assets/js/4.4f09cc47.js" defer></script><script src="/frontend/dist/assets/js/app.135ee2d9.js" defer></script>
   </body>
 </html>
