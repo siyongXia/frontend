@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">点我</div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // 函数调用模式
+        var name = 'xxxxxxx'
+        function a () {
+            console.log(this)
+            console.log(this.name)
+        }
+        a();
+        // 方法调用模式
+        var obj = {
+            name: 'zzzzzzz',
+            a: function (params) {
+                console.log(this);
+                console.log(this.name);
+            }
+        }
+        obj.a();
+        // 构造函数调用模式
+        var C = function () {
+            this.name = 'yyyyy';
+            console.log(this)
+        }
+        new C();
+
+        // 借用方法调用模式
+
+        var obj1 = {
+            name: 'obj1'
+        }
+         var obj2 = {
+            name: 'obj2',
+            a: function () {
+                console.log(this.name)
+            }
+        }
+        obj2.a();
+        obj2.a.call(obj1);
+
+        // 異步回調
+        document.getElementById('test').addEventListener('click', function () {
+            console.log(this)
+        })
+
+        $.ajax({
+            url: './data.json',
+            dataType: 'JSON',
+            success: function (params) {
+                console.log(this)
+            }
+        })
+    </script>
+</body>
+</html>
