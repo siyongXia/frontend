@@ -1,0 +1,18 @@
+// awesome.proto
+package IMpackage;
+syntax = "proto3";
+
+/**
+*普通消息格式
+*/
+message Message{
+	required string content = 1; //消息内容
+	required int64 send_time = 2; //消息发送时间
+	required string receiver_uid = 3; //接收人
+	optional string sender_uid = 4; //发送人
+	optional string member_id = 5; //家庭成员编号
+	required string message_id = 6; //客户端消息全局编号
+	optional string guid = 7; //服务端消息全局编号
+	required string session_id  = 8; //会话编号
+	required int64 business_type = 9; //业务类型
+}

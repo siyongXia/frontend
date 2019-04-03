@@ -30,6 +30,28 @@ module.exports = {
           '/oop/',
         ]
       },
+      {
+        title: '智能页面',
+        collapsable: true,
+        children: [
+          '/diycms/',
+          '/diycms/main.md',
+        ]
+      },
+      {
+        title: 'IM即时通讯',
+        collapsable: true,
+        children: [
+          '/IM/'
+        ]
+      },
+      {
+        title: 'wechat-vue',
+        collapsable: true,
+        children: [
+          '/wechat-vue/'
+        ]
+      }
     ]
   }
 }
