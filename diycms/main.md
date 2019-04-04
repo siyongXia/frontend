@@ -14,7 +14,7 @@
     - 不需要后台查数据,组件接口地址统一是[{"m":"CmsSelfApi","f":"indexInfo"}],默认数据就是创建筛选器之后保存的数据
         ![默认数据](./component-2.jpg)
 ## 4.配置组件对应的js文件
-```
+```javascript
 在/www/api/wechat-vue/wechat/js/diy/config.js中配置组件对应的js文件路径, @的意思在模板文件中配置过
 window.GLOBALCONFIG = {
     components:{
@@ -27,7 +27,7 @@ window.GLOBALCONFIG = {
 ## 5.编辑组件代码
 组件的格式需要保持保持统一,方便在/www/api/wechat-vue/wechat/js/diy/firEvent.js中全局调用,这样就可以尽可能少的去了解框架其他部分的代码,
 ### 格式
-```
+```javascript
 define(function(require, exports, module) {
 	var MicroclassFun = function(){
 	}
@@ -41,7 +41,7 @@ define(function(require, exports, module) {
 ```
 
 ### 组件里面的常用代码
-```
+```javascript
 define(function(require, exports, module) {
 	var edit = componentsTpl.edit;    // 编辑删除按钮
 	var componentTitle = componentsTpl.component_title;  // 组件的标题

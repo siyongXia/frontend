@@ -6,7 +6,7 @@
 3. sortable: 组件拖拽   [sortable文档](https://github.com/SortableJS/Sortable)
 
 ## 项目结构
-```
+```javascript
 路径: /app/wwwroot/api/wechat-vue/wechat/js/diy
 │  bindEvent.js        主要负责运营后台编辑页面时候的交互事件绑定
 │  components.js       公用的组件,包括每个组件的最外层元素,编辑/删除按钮,组件的标题栏
@@ -59,7 +59,7 @@
 配置的代码分别位于以下路径:
 - 运营后台: \www\91160-com\NykjAdmin\91160\tpl\page\setting.html
 - 微信: \www\api\wechat\app\Views\diycms\index.php
-```
+```javascript
 两个模板文件中的配置都是类似,微信的静态资源版本号需要通过http://weixin.91160.com/main/clearCache.html?key=Joy\Web\Controllers\BaseController\afterExecuteRoute动态的清除
 var version = "{$smarty.const.VERSION}";
 seajs.config({
@@ -80,7 +80,7 @@ seajs.config({
 ```
 ## 筛选器介绍
 筛选器是有很多个微元素交互组合而成,这些微元素包括,新建筛选器的时候,可以任意组合,如果现在的元素满足不了新组件的需求,新增对应的类型即可,对应的代码文件在app/wwwroot/api/wechat-vue/wechat/js/diy/widget.js
-```
+```javascript
 {name:'文本框',domName:'text',type:1},
 {name:'复选框',domName:'checkbox',type:2},
 {name:'公共科室',domName:'commonSection',type:3},
