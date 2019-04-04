@@ -1,6 +1,5 @@
 module.exports = {
   base: '/frontend/',
-  dest: '',
   title: '健康160前端分享1',
   themeConfig: {
     nav: [
