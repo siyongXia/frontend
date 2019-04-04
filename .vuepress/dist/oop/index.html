@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面向对象 | 健康160前端分享1</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/frontend/assets/css/styles.51b8b1a7.css" as="style"><link rel="preload" href="/frontend/assets/js/app.51b8b1a7.js" as="script"><link rel="preload" href="/frontend/assets/js/6.212aefff.js" as="script"><link rel="prefetch" href="/frontend/assets/css/2.styles.083de942.css"><link rel="prefetch" href="/frontend/assets/css/4.styles.5ce1cb36.css"><link rel="prefetch" href="/frontend/assets/js/1.5650c4c0.js"><link rel="prefetch" href="/frontend/assets/js/10.1f8f8057.js"><link rel="prefetch" href="/frontend/assets/js/11.6b812224.js"><link rel="prefetch" href="/frontend/assets/js/2.083de942.js"><link rel="prefetch" href="/frontend/assets/js/3.ca56cc0b.js"><link rel="prefetch" href="/frontend/assets/js/4.5ce1cb36.js"><link rel="prefetch" href="/frontend/assets/js/5.c070d30d.js"><link rel="prefetch" href="/frontend/assets/js/7.d33824cd.js"><link rel="prefetch" href="/frontend/assets/js/8.264e1fee.js"><link rel="prefetch" href="/frontend/assets/js/9.2c0395b9.js">
+    <link rel="stylesheet" href="/frontend/assets/css/2.styles.083de942.css"><link rel="stylesheet" href="/frontend/assets/css/4.styles.5ce1cb36.css"><link rel="stylesheet" href="/frontend/assets/css/styles.51b8b1a7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/frontend/" class="home-link router-link-active"><!----> <span class="site-name">健康160前端分享1</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/frontend/" class="nav-link">Home</a></div><div class="nav-item"><a href="/frontend/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/frontend/" class="nav-link">Home</a></div><div class="nav-item"><a href="/frontend/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>移动端远程调试</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>原生JS</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>面向对象</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/frontend/oop/" class="active sidebar-link">面向对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/oop/#三个基本特征" class="sidebar-link">三个基本特征</a></li><li class="sidebar-sub-header"><a href="/frontend/oop/#函数封装的问题" class="sidebar-link">函数封装的问题</a></li><li class="sidebar-sub-header"><a href="/frontend/oop/#继承" class="sidebar-link">继承</a></li><li class="sidebar-sub-header"><a href="/frontend/oop/#函数的创建方式" class="sidebar-link">函数的创建方式</a></li><li class="sidebar-sub-header"><a href="/frontend/oop/#原型链" class="sidebar-link">原型链</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>智能页面</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>IM即时通讯</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>wechat-vue</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="面向对象"><a href="#面向对象" aria-hidden="true" class="header-anchor">#</a> 面向对象</h1> <h2 id="三个基本特征"><a href="#三个基本特征" aria-hidden="true" class="header-anchor">#</a> 三个基本特征</h2> <pre><code>- 封装
+- 继承
+- 多肽
+</code></pre> <h2 id="函数封装的问题"><a href="#函数封装的问题" aria-hidden="true" class="header-anchor">#</a> 函数封装的问题</h2> <pre><code>- 全局污染（变量在全局范围内有效）
+- 大量的函数无法管理
+- 使得维护变得困难
+</code></pre> <div class="language- extra-class"><pre class="language-text"><code>bade code 
+
+/*微信公众内嵌web app公共脚本*/
+function pageResize(){}
+var arr_scroll = [], arr_scrollwrap = $(&quot;.scroll-pagewrap&quot;);
+function loaddata(){}
+function showSelect(){}
+function chgSelect(){}
+var nav = $(&quot;.nav&quot;).length ? $(&quot;.nav&quot;) : '';
+var footnav = $(&quot;.footnav&quot;).length ? $(&quot;.footnav&quot;) : '';
+var scalp = $(&quot;.screen&quot;).length ? $(&quot;.screen&quot;) : '' ;
+var linklist = $(&quot;.unit-list, .doc-list, .news-list, .search-dlist, uc-order-list, consult-list, ac-cs-list&quot;);
+var popup, ptheight = parseInt($(&quot;.pop-title&quot;).outerHeight());
+var answerheight = parseInt($(&quot;.greenanswer-title&quot;).outerHeight());
+var ny_domain = window.location.host.split(&quot;.&quot;)[1] + &quot;.&quot; + window.location.host.split(&quot;.&quot;)[2];
+var dataParam = '';
+var u = navigator.userAgent, app = navigator.appVersion;
+var android = u.indexOf('Android') &gt; -1 || u.indexOf('Linux') &gt; -1; //android终端或者uc浏览器
+var ios = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+var hasUTel = !!$(&quot;.unit-tel&quot;).length;
+var codesend = 1;
+//@ init
+function init(){}
+function getAppToken(){}
+/**
+ * ios滑动隐藏键盘start
+ */
+//判断是否为苹果
+var isIPHONE = navigator.userAgent.toUpperCase().indexOf('IPHONE')!= -1;
+function getUrlParam(pname) {}
+// 消息滚动展示
+var doscroll = function(){};
+var cook_top_app_ads = $.cookieHelper('cook_top_app_ads');
+var cook_bottom_app_ads = $.cookieHelper('cook_bottom_app_ads');
+function pullUpNativeDoc (unit_id,dep_id,doctor_id,type){ //拉取原生} 
+function compressImage(file, callback) {//canvas压缩图片});
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>better code 
+
+var NYKJ = {
+    getAppToken: function() {},
+    showTips: function(tagStr) {}
+};
+
+</code></pre></div><h4 id="函数封装的原则"><a href="#函数封装的原则" aria-hidden="true" class="header-anchor">#</a> 函数封装的原则</h4> <pre><code>1.单一职责(高类聚, 低耦合)
+2.健壮、安全(默认参数, 异常捕获)
+</code></pre> <div class="language- extra-class"><pre class="language-text"><code>参数过多
+function (a, b, c, d, e, ...) {}
+建议
+function ({a: 1, b: 1}) {}
+异常捕获
+function a (str) {
+    var str1 = JSON.parse(str) // params不是JSON字符串会报错
+}
+a(1);
+
+function b (arr) {
+    arr.forEach(() =&gt; {...}) // params不是数据的时候会报错
+}
+b(1)
+b()
+
+建议
+1.危险操作使用try catch 
+function a (str) {
+    try {
+        var str1 = JSON.parse(str) // params不是JSON字符串会报错
+    } catch (err) {
+        console.log(err)
+    }
+}
+2.api操作需要需要先做类型判断或者给默认值
+function b (arr) {
+    if(Object.prototype.toString.call(arr) === '[object Array]') {
+        arr.forEach(() =&gt; {...}) // params不是数据的时候会报错
+    }else {
+        return arr;
+    }
+}
+</code></pre></div><h4 id="函数的返回值"><a href="#函数的返回值" aria-hidden="true" class="header-anchor">#</a> 函数的返回值</h4> <div class="language- extra-class"><pre class="language-text"><code>function a () {
+    var str = 1;
+}
+function b () {
+    var str = 1;
+    return str;
+}
+function c () {
+    var str = 1;
+    setTimeout(function() {
+        return str;
+    },200)
+}   
+
+function C () {
+    this.a = 1;
+} 
+console.log(new C());
+
+function C () {
+    this.a = 1;
+    return {
+        a: 3
+    }
+} 
+console.log(new C())
+
+function C () {
+    this.a = 1;
+    return 3
+} 
+console.log(new C())
+</code></pre></div><h4 id="函数的调用形式"><a href="#函数的调用形式" aria-hidden="true" class="header-anchor">#</a> 函数的调用形式</h4> <pre><code>- 函数调用模式 this 指向 window  事件回调函数,
+- 方法调用模式(函数作为某个对象的属性被调用) this指向调用方法的对象
+- 构造函数调用模式 this指向新创建出来的对象
+- 借用方法调用模式(上下文调用模式,call,apply) this指向指定的对象
+</code></pre> <h4 id="通过new-关键字调用函数和直接调用函数的区别"><a href="#通过new-关键字调用函数和直接调用函数的区别" aria-hidden="true" class="header-anchor">#</a> 通过new 关键字调用函数和直接调用函数的区别</h4> <pre><code>```
+    var Person = function () {
+        this.str = 1;
+    }
+    Person.prototype = {
+        constructor: Person,
+        sayHi: function () {
+            console.log(1)
+        }
+    }
+    var person = new Person();
+
+    1. 创建一个新的对象
+    2. 将所创建对象的__proto__属性值设成构造函数的prototype属性值
+    3. 将构造函数内部的上下文指向这个对象,执行构造函数内部的代码, 设置这个新的对象的属性
+    3. 隐式的返回 this
+```
+</code></pre> <h2 id="继承"><a href="#继承" aria-hidden="true" class="header-anchor">#</a> 继承</h2> <pre><code>子类可以使用从父类继承的属性和方法
+</code></pre> <h3 id="继承的方式"><a href="#继承的方式" aria-hidden="true" class="header-anchor">#</a> 继承的方式</h3> <h4 id="经典继承-object-create"><a href="#经典继承-object-create" aria-hidden="true" class="header-anchor">#</a> 经典继承 - Object.create</h4> <div class="language- extra-class"><pre class="language-text"><code>var o1 = { 
+    sayHi: function() {
+        alert(&quot;hello world&quot;);
+    }
+};
+
+var o2 = Object.create(o1);
+o2.sayHi();
+</code></pre></div><h4 id="原型继承-object-prototype"><a href="#原型继承-object-prototype" aria-hidden="true" class="header-anchor">#</a> 原型继承 - Object.prototype</h4> <div class="language- extra-class"><pre class="language-text"><code>var Person = function () {
+    this.str = 1;
+}
+Person.prototype = {
+    constructor: Person,
+    sayHi: function () {
+        console.log(1)
+    }
+}
+var person = new Person();
+person.sayHi()
+
+构造函数: Person
+原型对象: Person.prototype
+实例对象:person
+constructor: 指向对象的构造函数（person.constructor === Person）
+person.__proto__ === Person.prototype
+
+规范
+
+所有属性和数据放在构造函数中
+所有的方法放在原型中
+
+jquery.autocomplete.js
+</code></pre></div><h2 id="函数的创建方式"><a href="#函数的创建方式" aria-hidden="true" class="header-anchor">#</a> 函数的创建方式</h2> <div class="language- extra-class"><pre class="language-text"><code>1. var test = function () {} // 函数表达式
+2. function test() // 函数申明
+3. var test = new Function('n1','n2','return n1+n2') // 最后一个参数是函数体,其他的都是参数
+</code></pre></div><p>所有的函数都可以理解为是通过Function创造出来的,包括Array, Object</p> <div class="language- extra-class"><pre class="language-text"><code>    var test = function () {} 
+    test.__proto__ === Function.prototype
+    Array.__proto__ === Function.prototype
+</code></pre></div><h2 id="原型链"><a href="#原型链" aria-hidden="true" class="header-anchor">#</a> 原型链</h2> <pre><code>- 对象有原型对象，原型对象也是对象，所以，原型对象也有原型对象，这样一环扣一环，就形成了一条链式结构，叫做：原型链
+- 原型链结构的最上层是 Object.prototype，任何对象都直接或间接的继承自 Object.prototype
+- 属性查找顺序:从任何一个对象自身查找,找到了就直接返回,找不到再去该对象的原型上找,找到了直接返回,找不到再去该对象的原型对象的原型对象上面去找,一直往上找直到null
+</code></pre> <div class="language- extra-class"><pre class="language-text"><code>var obj = {
+    name: '111',
+}
+// var obj = new Object()
+Object.prototype.name = '222';
+Object.prototype.sex = '男';
+console.log(obj.name)
+console.log(obj.sex)
+
+</code></pre></div><img src="/frontend/assets/img/prototypelink.a0517d7b.jpg" width="100%"></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/frontend/native/JavaScript.html" class="prev">
+          原生JavaScript简介
+        </a></span> <span class="next"><a href="/frontend/diycms/">
+          框架介绍
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/frontend/assets/js/6.212aefff.js" defer></script><script src="/frontend/assets/js/app.51b8b1a7.js" defer></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 module.exports = {
-  base: '/frontend/dist/',
-  dest: 'dist',
-  title: '健康160前端分享',
+  base: '/frontend/',
+  dest: '',
+  title: '健康160前端分享1',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
